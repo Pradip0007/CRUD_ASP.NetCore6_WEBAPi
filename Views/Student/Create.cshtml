@@ -1,0 +1,52 @@
+﻿@model CRUDAspCoreWebAPI.Models.Student
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2 class="text-light">Create</h2>
+
+<h4 class="text-light">Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="StudentName" class="control-label text-light"></label>
+                <input asp-for="StudentName" class="form-control" />
+                <span asp-validation-for="StudentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentGender" class="control-label text-light"></label>
+                <input asp-for="StudentGender" class="form-control" />
+                <span asp-validation-for="StudentGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label text-light"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Standard" class="control-label text-light"></label>
+                <input asp-for="Standard" class="form-control" />
+                <span asp-validation-for="Standard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FatherName" class="control-label text-light"></label>
+                <input asp-for="FatherName" class="form-control" />
+                <span asp-validation-for="FatherName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
